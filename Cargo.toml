@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = [
+    "lives-macros",
+    "lives",
+]
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/aegistudio/lives-rs"
+authors = ["aegistudio (www@aegistudio.net)"]
+version = "0.1.0"
+
+[workspace.dependencies]
+# Submodule Cross-Referencing
+lives        = { version = "=0.1.0", path = "lives" }
+lives-macros = { version = "=0.1.0", path = "lives-macros" }
+
+# Utility Libraries
+anyhow = { version = "1.0.100" }
+
+# Procedural Macros
+proc-macro2 = { version = "1.0.60" }
+proc-macro-crate = { version = "3.4.0" }
+quote = { version = "1.0" }
+syn = { version = "2.0.52", features = ["full"] }
