@@ -2,6 +2,14 @@
 
 Lifetime dynamic smart pointers.
 
+[![CI Status][ci-badge]][ci-url]
+[![MIT licensed][mit-badge]][mit-url]
+
+[ci-badge]: https://github.com/aegistudio/lives-rs/actions/workflows/rust.yml/badge.svg
+[ci-url]: https://github.com/aegistudio/lives-rs/actions/workflows/rust.yml
+[mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[mit-url]: https://github.com/aegistudio/lives-rs/blob/master/LICENSE
+
 ## Introduction
 
 This crate aims at making weak pointers that may forget **covariant** lifetimes of a type. It relies on the fact that object may not outlive its covariant lifetime, and performs runtime checking of the liveness of the pointee object to determine the liveness of the forgotten lifetime. When it's alive, the weak pointer allows the caller to perform actions on a reference to the pointee object borrowed for a lifetime strictly contained in the covariant lifetime of the object, while forbidding the caller from extending it.
