@@ -10,12 +10,13 @@ edition = "2024"
 license = "MIT"
 repository = "https://github.com/aegistudio/lives-rs"
 authors = ["aegistudio (www@aegistudio.net)"]
-version = "0.1.0"
+version = "0.1.1"
+readme = "README.md"
 
 [workspace.dependencies]
 # Submodule Cross-Referencing
-lives        = { version = "=0.1.0", path = "lives" }
-lives-macros = { version = "=0.1.0", path = "lives-macros" }
+lives        = { version = "=0.1.1", path = "lives" }
+lives-macros = { version = "=0.1.1", path = "lives-macros" }
 
 # Utility Libraries
 anyhow = { version = "1.0.100" }
